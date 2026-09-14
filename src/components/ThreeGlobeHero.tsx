@@ -11,7 +11,18 @@ export const ThreeGlobeHero: React.FC = () => {
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.z = 210;
+    
+    const updateCamera = () => {
+      if (!container) return;
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+      const aspect = width / height;
+      camera.aspect = aspect;
+      // Generous buffer distance so orbital rings never clip at extreme tilts or small screens
+      camera.position.z = aspect < 1 ? Math.max(260, 240 / aspect) : 255;
+      camera.updateProjectionMatrix();
+    };
+    updateCamera();
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
@@ -144,8 +155,7 @@ export const ThreeGlobeHero: React.FC = () => {
 
     const onResize = () => {
       if (!container) return;
-      camera.aspect = container.clientWidth / container.clientHeight;
-      camera.updateProjectionMatrix();
+      updateCamera();
       renderer.setSize(container.clientWidth, container.clientHeight);
     };
 

@@ -58,7 +58,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ t, onOpenBooking }) =>
         </div>
 
         {/* 3D Visual Centerpiece */}
-        <div className="pt-2 max-w-lg mx-auto relative">
+        <div className="pt-2 max-w-2xl mx-auto relative overflow-visible">
           <ThreeGlobeHero />
         </div>
 
