@@ -6,10 +6,9 @@ import type { TranslationSchema } from '../data/translations';
 
 interface CurrenciesSectionProps {
   t: TranslationSchema['currencies'];
-  onOpenBooking: () => void;
 }
 
-export const CurrenciesSection: React.FC<CurrenciesSectionProps> = ({ t, onOpenBooking }) => {
+export const CurrenciesSection: React.FC<CurrenciesSectionProps> = ({ t }) => {
   return (
     <section id="currencies" className="py-20 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
@@ -52,13 +51,15 @@ export const CurrenciesSection: React.FC<CurrenciesSectionProps> = ({ t, onOpenB
           <p className="text-xs sm:text-sm text-[var(--text-muted)]">
             {t.moreText}
           </p>
-          <button
-            onClick={onOpenBooking}
-            className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-cyan-400 hover:underline underline-offset-4 cursor-pointer"
+          <a
+            href="https://t.me/otcunlimited"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-cyan-400 hover:underline underline-offset-4"
           >
             <span>{t.customRailCta}</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
 
       </div>

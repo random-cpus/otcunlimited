@@ -45,19 +45,13 @@ export function App() {
       />
       
       {/* Hero Section */}
-      <HeroSection
-        t={t.hero}
-        onOpenBooking={() => setIsBookingOpen(true)}
-      />
+      <HeroSection t={t.hero} />
       
       {/* Features Section */}
       <FeaturesSection t={t.features} />
       
       {/* 30+ Currencies Section */}
-      <CurrenciesSection
-        t={t.currencies}
-        onOpenBooking={() => setIsBookingOpen(true)}
-      />
+      <CurrenciesSection t={t.currencies} />
       
       {/* Trust & Industry Leaders Section */}
       <TrustSection t={t.trust} />

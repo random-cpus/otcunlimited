@@ -1,15 +1,14 @@
 
 import React from 'react';
-import { MessageCircle, Calendar, ArrowRight, ShieldCheck, Zap, Activity, Clock, Shield } from 'lucide-react';
+import { MessageCircle, ArrowRight, ShieldCheck, Zap, Activity, Clock, Shield } from 'lucide-react';
 import { ThreeGlobeHero } from './ThreeGlobeHero';
 import type { TranslationSchema } from '../data/translations';
 
 interface HeroSectionProps {
   t: TranslationSchema['hero'];
-  onOpenBooking: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ t, onOpenBooking }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ t }) => {
   return (
     <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-8">
@@ -36,25 +35,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ t, onOpenBooking }) =>
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <div className="flex items-center justify-center pt-2">
           <a
             href="https://t.me/otcunlimited"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-blue-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.03] active:scale-[0.98]"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-5 h-5" />
             <span>{t.ctaTelegram}</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-5 h-5" />
           </a>
-
-          <button
-            onClick={onOpenBooking}
-            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[var(--btn-sec-bg)] hover:bg-black/5 dark:hover:bg-slate-800 text-[var(--text-main)] font-semibold text-sm border border-[var(--btn-sec-border)] flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
-          >
-            <Calendar className="w-4 h-4 text-blue-500 dark:text-cyan-400" />
-            <span>{t.ctaDiscovery}</span>
-          </button>
         </div>
 
         {/* 3D Visual Centerpiece */}
