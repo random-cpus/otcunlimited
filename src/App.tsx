@@ -63,10 +63,7 @@ export function App() {
       <TrustSection t={t.trust} />
       
       {/* Ready to experience seamless OTC? */}
-      <CtaSection
-        t={t.cta}
-        onOpenBooking={() => setIsBookingOpen(true)}
-      />
+      <CtaSection t={t.cta} />
       
       {/* Footer */}
       <Footer t={t.footer} />
