@@ -7,13 +7,11 @@ import { CurrenciesSection } from './components/CurrenciesSection';
 import { TrustSection } from './components/TrustSection';
 import { CtaSection } from './components/CtaSection';
 import { Footer } from './components/Footer';
-import { BookingModal } from './components/BookingModal';
 import { TRANSLATIONS } from './data/translations';
 import type { LanguageCode } from './data/translations';
 
 export function App() {
   const [currentLang, setCurrentLang] = useState<LanguageCode>('US');
-  const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -24,12 +22,11 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-main)] font-sans">
-      {/* Header with Language Dropdown & Book Button */}
+      {/* Header with Language Dropdown & Telegram Action */}
       <Navbar
         currentLang={currentLang}
         onLangChange={setCurrentLang}
         t={t.nav}
-        onOpenBooking={() => setIsBookingOpen(true)}
       />
       
       {/* Hero Section */}
@@ -49,13 +46,6 @@ export function App() {
       
       {/* Footer */}
       <Footer t={t.footer} />
-
-      {/* Discovery Booking Modal */}
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        t={t.bookingModal}
-      />
     </div>
   );
 }

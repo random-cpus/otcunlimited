@@ -1,20 +1,18 @@
 
 import React, { useState } from 'react';
-import { Globe, Calendar, Menu, X, Check } from 'lucide-react';
+import { Globe, MessageCircle, Menu, X, Check } from 'lucide-react';
 import type { LanguageCode, TranslationSchema } from '../data/translations';
 
 interface NavbarProps {
   currentLang: LanguageCode;
   onLangChange: (lang: LanguageCode) => void;
   t: TranslationSchema['nav'];
-  onOpenBooking: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentLang,
   onLangChange,
-  t,
-  onOpenBooking
+  t
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
@@ -106,25 +104,30 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {/* Blue Book Pill Button */}
-          <button
-            onClick={onOpenBooking}
-            className="flex items-center gap-2 px-5 py-2 rounded-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-xs font-bold shadow-lg shadow-blue-600/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          {/* Blue Telegram Pill Button */}
+          <a
+            href="https://t.me/otcunlimited"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold shadow-lg shadow-blue-600/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <Calendar className="w-3.5 h-3.5" />
-            <span>{t.book}</span>
-          </button>
+            <MessageCircle className="w-3.5 h-3.5" />
+            <span>Telegram</span>
+          </a>
 
         </div>
 
         {/* Mobile menu toggle */}
         <div className="flex sm:hidden items-center gap-2">
-          <button
-            onClick={onOpenBooking}
-            className="px-3.5 py-1.5 rounded-full bg-[#2563eb] text-white text-xs font-bold cursor-pointer"
+          <a
+            href="https://t.me/otcunlimited"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#2563eb] text-white text-xs font-bold cursor-pointer"
           >
-            {t.book}
-          </button>
+            <MessageCircle className="w-3.5 h-3.5" />
+            <span>Telegram</span>
+          </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-lg bg-[var(--btn-sec-bg)] border border-[var(--btn-sec-border)] text-[var(--text-main)] cursor-pointer"
