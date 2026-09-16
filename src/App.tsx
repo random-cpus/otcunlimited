@@ -13,34 +13,22 @@ import type { LanguageCode } from './data/translations';
 
 export function App() {
   const [currentLang, setCurrentLang] = useState<LanguageCode>('US');
-  const [isDark, setIsDark] = useState<boolean>(true);
   const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-    }
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    setIsDark(prev => !prev);
-  };
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  }, []);
 
   const t = TRANSLATIONS[currentLang] || TRANSLATIONS.US;
 
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-main)] font-sans transition-colors duration-300">
-      {/* Header with Language Dropdown & Working Theme Toggle */}
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-main)] font-sans">
+      {/* Header with Language Dropdown & Book Button */}
       <Navbar
         currentLang={currentLang}
         onLangChange={setCurrentLang}
         t={t.nav}
-        isDark={isDark}
-        onToggleTheme={toggleTheme}
         onOpenBooking={() => setIsBookingOpen(true)}
       />
       

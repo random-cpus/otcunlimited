@@ -1,14 +1,12 @@
 
 import React, { useState } from 'react';
-import { Globe, Sun, Moon, Calendar, Menu, X, Check } from 'lucide-react';
+import { Globe, Calendar, Menu, X, Check } from 'lucide-react';
 import type { LanguageCode, TranslationSchema } from '../data/translations';
 
 interface NavbarProps {
   currentLang: LanguageCode;
   onLangChange: (lang: LanguageCode) => void;
   t: TranslationSchema['nav'];
-  isDark: boolean;
-  onToggleTheme: () => void;
   onOpenBooking: () => void;
 }
 
@@ -16,8 +14,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   currentLang,
   onLangChange,
   t,
-  isDark,
-  onToggleTheme,
   onOpenBooking
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -110,19 +106,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {/* Theme Toggle Button */}
-          <button
-            onClick={onToggleTheme}
-            className="p-2 rounded-full bg-[var(--btn-sec-bg)] border border-[var(--btn-sec-border)] text-[var(--text-main)] hover:text-blue-500 hover:border-blue-500/40 transition-all cursor-pointer shadow-sm"
-            title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-          >
-            {isDark ? (
-              <Sun className="w-3.5 h-3.5 text-amber-400" />
-            ) : (
-              <Moon className="w-3.5 h-3.5 text-slate-700" />
-            )}
-          </button>
-
           {/* Blue Book Pill Button */}
           <button
             onClick={onOpenBooking}
@@ -136,12 +119,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Mobile menu toggle */}
         <div className="flex sm:hidden items-center gap-2">
-          <button
-            onClick={onToggleTheme}
-            className="p-2 rounded-full bg-[var(--btn-sec-bg)] border border-[var(--btn-sec-border)] text-[var(--text-main)] cursor-pointer"
-          >
-            {isDark ? <Sun className="w-3.5 h-3.5 text-amber-400" /> : <Moon className="w-3.5 h-3.5 text-slate-700" />}
-          </button>
           <button
             onClick={onOpenBooking}
             className="px-3.5 py-1.5 rounded-full bg-[#2563eb] text-white text-xs font-bold cursor-pointer"
