@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
@@ -7,11 +6,14 @@ import { CurrenciesSection } from './components/CurrenciesSection';
 import { TrustSection } from './components/TrustSection';
 import { CtaSection } from './components/CtaSection';
 import { Footer } from './components/Footer';
+import { LegalModal } from './components/LegalModal';
+import type { LegalDocType } from './components/LegalModal';
 import { TRANSLATIONS } from './data/translations';
 import type { LanguageCode } from './data/translations';
 
 export function App() {
   const [currentLang, setCurrentLang] = useState<LanguageCode>('US');
+  const [activeLegalDoc, setActiveLegalDoc] = useState<LegalDocType>(null);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -44,8 +46,17 @@ export function App() {
       {/* Ready to experience seamless OTC? */}
       <CtaSection t={t.cta} />
       
-      {/* Footer */}
-      <Footer t={t.footer} />
+      {/* Footer with Legal Triggers */}
+      <Footer
+        t={t.footer}
+        onOpenLegal={(doc) => setActiveLegalDoc(doc)}
+      />
+
+      {/* Institutional Legal & Compliance Modal */}
+      <LegalModal
+        docType={activeLegalDoc}
+        onClose={() => setActiveLegalDoc(null)}
+      />
     </div>
   );
 }
