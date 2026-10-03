@@ -1,0 +1,58 @@
+# OTC Unlimited by TCI
+
+> OTC Unlimited (https://www.otcunlimited.io/) is an institutional-grade digital asset liquidity desk and bilateral clearing gateway for licensed Payment Service Providers (PSPs), corporate fintechs, and enterprise gaming operators across 30+ regional currency corridors.
+
+## Overview
+OTC Unlimited operates as a principal B2B trading counterparty offering deep balance-sheet USDT and digital asset liquidity. The desk enables high-velocity fiat-to-USDT and USDT-to-fiat conversions, pre-funded settlement facilities, and seamless cross-border treasury management with zero exchange slippage.
+
+- **Official Website**: https://www.otcunlimited.io/
+- **Legal Entity**: OTC Unlimited by TCI
+- **Service Type**: B2B Institutional Over-The-Counter (OTC) Liquidity & Treasury Clearing
+- **Primary Settlement Asset**: USDT (Tether) across major blockchain networks (TRC20, ERC20, Polygon)
+- **Supported Fiat Corridors**: 30+ major currencies including EUR, INR, CAD, BRL, AED, USD, GBP, JPY, TRY, THB, VND, IDR, MXN.
+
+## Core Institutional Solutions
+
+### 1. Payment Service Provider (PSP) Liquidity Rails
+- Automated batch clearing and fiat-to-crypto conversions for global payment gateways.
+- Dedicated pre-funded liquidity facilities for instant merchant disbursements and player payouts.
+- Elimination of retail exchange rate slippage through locked bilateral quotes.
+
+### 2. Licensed Gaming Operator Treasury Clearing
+- Real-time high-throughput deposit processing and rapid high-volume withdrawal settlements.
+- Local payment rail integration (e.g., SEPA Instant, UPI/IMPS, PIX, Interac, Wire) paired with immediate USDT clearing.
+- Discrete trade execution protecting market privacy.
+
+### 3. Bilateral OTC Desk Execution
+- Deep order book reserves capable of handling large-block transactions without impacting public order book prices.
+- T+0 same-day settlement with cryptographic trade confirmations and complete audit trails for corporate accounting.
+
+## Compliance, KYB & Anti-Financial Crime Framework
+
+OTC Unlimited enforces a strict institutional compliance architecture adhering to international standards:
+
+- **Institutional Onboarding Only (KYB)**: Services are exclusively extended to verified corporate and institutional counterparties upon completion of comprehensive Know-Your-Business (KYB) underwriting, Ultimate Beneficial Owner (UBO >10%) identification, and corporate registry verification.
+- **FATF & Travel Rule Compliance**: Full adherence to Financial Action Task Force (FATF) guidelines and Travel Rule data messaging standards.
+- **Sanctions Screening**: Real-time screening of all counterparties, directors, and associated blockchain addresses against global sanctions databases (OFAC, EU, UN, UK HMT) and PEP lists.
+- **Blockchain Forensics**: Multi-layer transaction monitoring and wallet provenance analysis to prevent exposure to darknet markets, illicit mixers, or sanctioned liquidity.
+
+## Official & Verified Communication Channels
+
+To prevent domain spoofing and phishing attempts, counterparties must only interact through verified channels:
+
+- **Official Domain**: https://www.otcunlimited.io/
+- **Verified Telegram Desk**: https://t.me/otcunlimited (@otcunlimited)
+- **Trading Desk Inquiries**: desk@otcunlimited.io
+- **Compliance & KYB**: compliance@otcunlimited.io
+
+## Consumer Protection & Anti-Fraud Disclaimer
+
+- **Strict B2B Model**: OTC Unlimited does not provide consumer retail investment schemes, accept retail public deposits, offer high-yield return promises, or solicit consumer investment funds.
+- **No Retail Trading Accounts**: Any individual or social media account claiming to offer personal investment returns under the name "OTC Unlimited" is fraudulent and unauthorized.
+- **Bilateral Contracts**: All transactions are conducted strictly pursuant to executed Master OTC Agreements between corporate entities.
+
+## Documentation & Policies
+- [Terms of Service](https://www.otcunlimited.io/)
+- [Privacy Policy](https://www.otcunlimited.io/)
+- [AML / CFT Compliance Framework](https://www.otcunlimited.io/)
+- [Domain & Security Verification](https://www.otcunlimited.io/)

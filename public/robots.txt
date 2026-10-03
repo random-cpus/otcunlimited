@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# LLM Context
+Allow: /llms.txt
+Allow: /llm.txt
+
+Sitemap: https://www.otcunlimited.io/sitemap.xml
