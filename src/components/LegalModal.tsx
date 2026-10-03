@@ -139,9 +139,15 @@ export const LegalModal: React.FC<LegalModalProps> = ({ docType, onClose }) => {
                 </li>
               </ul>
 
-              <h4 className="text-white font-bold text-sm">Anti-Impersonation & Phishing Warning</h4>
+              <h4 className="text-white font-bold text-sm">Anti-Impersonation & Blacklisted Domains Advisory</h4>
+              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-xs space-y-1.5">
+                <div className="font-bold text-red-200">⚠️ Blacklisted / Fraudulent Domain Warning:</div>
+                <p>
+                  Domains such as <strong>otcunlimited.com</strong> or other non-authorized extensions (.net, .org, .xyz) are <strong>blacklisted and completely unaffiliated</strong> with our trading desk. Do not visit, deposit funds, or interact with unauthorized clone domains.
+                </p>
+              </div>
               <p>
-                OTC Unlimited will never direct-message you from unverified accounts requesting retail crypto transfers or proposing high-yield returns. If in doubt, contact our verified desk directly at <a href="mailto:compliance@otcunlimited.io" className="text-blue-400 underline">compliance@otcunlimited.io</a>.
+                OTC Unlimited will never direct-message you from unverified accounts requesting retail crypto transfers or proposing high-yield returns. If in doubt, contact our verified compliance desk directly at <a href="mailto:compliance@otcunlimited.io" className="text-blue-400 underline">compliance@otcunlimited.io</a>.
               </p>
             </div>
           )}

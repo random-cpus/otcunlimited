@@ -45,6 +45,11 @@ To prevent domain spoofing and phishing attempts, counterparties must only inter
 - **Trading Desk Inquiries**: desk@otcunlimited.io
 - **Compliance & KYB**: compliance@otcunlimited.io
 
+## Security Notice & Blacklisted Domains Warning
+
+- **Blacklisted / Unauthorized Domains**: Domains such as **otcunlimited.com**, .net, or unauthorized clones are blacklisted, fraudulent, and completely unaffiliated with OTC Unlimited.
+- **Sole Official Portal**: The only authentic and verified operational portal is **https://www.otcunlimited.io/**.
+
 ## Consumer Protection & Anti-Fraud Disclaimer
 
 - **Strict B2B Model**: OTC Unlimited does not provide consumer retail investment schemes, accept retail public deposits, offer high-yield return promises, or solicit consumer investment funds.
